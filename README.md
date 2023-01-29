@@ -1,6 +1,6 @@
 # capacitor-musetrainer-pitch-detection
 
-Capacitor Pitch Detection plugin, by authors of [MuseTrainer app][https://musetrainer.com].
+Capacitor Pitch Detection plugin, by authors of [MuseTrainer app](https://musetrainer.com).
 
 ## Supports
 
@@ -20,6 +20,8 @@ npx cap sync
 <docgen-index>
 
 * [`addListener('pitchReceive', ...)`](#addlistenerpitchreceive)
+* [`checkPermissions()`](#checkpermissions)
+* [`requestPermissions()`](#requestpermissions)
 * [Interfaces](#interfaces)
 * [Type Aliases](#type-aliases)
 
@@ -44,6 +46,28 @@ addListener(eventName: 'pitchReceive', listenerFunc: (pitch: Pitch) => void) => 
 --------------------
 
 
+### checkPermissions()
+
+```typescript
+checkPermissions() => Promise<PermissionStatus>
+```
+
+**Returns:** <code>Promise&lt;<a href="#permissionstatus">PermissionStatus</a>&gt;</code>
+
+--------------------
+
+
+### requestPermissions()
+
+```typescript
+requestPermissions() => Promise<PermissionStatus>
+```
+
+**Returns:** <code>Promise&lt;<a href="#permissionstatus">PermissionStatus</a>&gt;</code>
+
+--------------------
+
+
 ### Interfaces
 
 
@@ -54,11 +78,23 @@ addListener(eventName: 'pitchReceive', listenerFunc: (pitch: Pitch) => void) => 
 | **`remove`** | <code>() =&gt; Promise&lt;void&gt;</code> |
 
 
+#### PermissionStatus
+
+| Prop             | Type                                                        |
+| ---------------- | ----------------------------------------------------------- |
+| **`microphone`** | <code><a href="#permissionstate">PermissionState</a></code> |
+
+
 ### Type Aliases
 
 
 #### Pitch
 
-<code>{ freq: number; amp: number; }</code>
+<code>{ freq: number; amp: number; note: string; noteAlt: string; }</code>
+
+
+#### PermissionState
+
+<code>'prompt' | 'prompt-with-rationale' | 'granted' | 'denied'</code>
 
 </docgen-api>

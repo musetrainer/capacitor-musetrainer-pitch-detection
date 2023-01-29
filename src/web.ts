@@ -3,7 +3,7 @@
 import type { ListenerCallback, PluginListenerHandle } from '@capacitor/core';
 import { WebPlugin } from '@capacitor/core';
 
-import type { PitchDetectorPlugin } from './definitions';
+import type { PitchDetectorPlugin, PermissionStatus } from './definitions';
 
 export class PitchDetectorWeb extends WebPlugin implements PitchDetectorPlugin {
   async addListener(
@@ -11,10 +11,14 @@ export class PitchDetectorWeb extends WebPlugin implements PitchDetectorPlugin {
     _listenerFunc: ListenerCallback,
     // @ts-ignore https://github.com/typescript-eslint/typescript-eslint/issues/2034
   ): Promise<PluginListenerHandle> & PluginListenerHandle {
-    return {
-      remove: async () => {
-        // TODO: Implement me!
-      },
-    };
+    throw this.unimplemented('Not implemented on web.');
+  }
+
+  async checkPermissions(): Promise<PermissionStatus> {
+    throw this.unimplemented('Not implemented on web.');
+  }
+
+  async requestPermissions(): Promise<PermissionStatus> {
+    throw this.unimplemented('Not implemented on web.');
   }
 }
