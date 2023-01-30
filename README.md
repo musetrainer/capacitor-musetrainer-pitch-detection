@@ -2,6 +2,8 @@
 
 Capacitor Pitch Detection plugin, by authors of [MuseTrainer app](https://musetrainer.com).
 
+[Example app](https://github.com/musetrainer/pitch-detector).
+
 ## Supports
 
 - [x] iOS

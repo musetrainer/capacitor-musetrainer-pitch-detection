@@ -1,6 +1,6 @@
 {
   "name": "capacitor-musetrainer-pitch-detection",
-  "version": "0.0.1-alpha.8",
+  "version": "0.0.1",
   "description": "Capacitor Pitch detection plugin",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
