@@ -1,3 +1,6 @@
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/musetrainer/capacitor-musetrainer-pitch-detection/blob/master/LICENSE)
+[![version](https://img.shields.io/npm/v/capacitor-musetrainer-pitch-detection/latest.svg)](https://www.npmjs.com/package/capacitor-musetrainer-pitch-detection)
+
 # capacitor-musetrainer-pitch-detection
 
 Capacitor Pitch Detection plugin, by authors of [MuseTrainer app](https://musetrainer.com).
